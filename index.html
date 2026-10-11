@@ -1,239 +1,270 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl" data-lang="fa">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Corporate Strategy & Governance | Executive Value Proposition</title>
-<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>نقشه راه اجرایی آریوژن | AryoGen Executive Roadmap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap');
-:root{--navy:#102a43;--blue:#0b7285;--mint:#e6f7f5;--sky:#edf5fb;--gold:#d99a28;--red:#c94b4b;--ink:#243b53;--muted:#627d98;--line:#d9e2ec;--paper:#fff;--bg:#f5f8fb;--shadow:0 18px 55px rgba(16,42,67,.08)}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer}.app{min-height:100vh}
-.topbar{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:15px;padding:13px 5vw;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:12px;font-weight:800}.brand img,.logo{width:43px;height:43px;object-fit:contain;border-radius:8px}.logo{display:grid;place-items:center;border:1px dashed var(--blue);font-size:10px;color:var(--blue);text-align:center}.toolbar{display:flex;gap:7px;flex-wrap:wrap}.btn{border:1px solid var(--line);border-radius:9px;padding:9px 12px;background:#fff;color:var(--navy);font-size:12px;font-weight:800}.btn.primary{background:var(--navy);color:#fff;border-color:var(--navy)}.btn.accent{background:var(--blue);color:#fff;border-color:var(--blue)}.btn.danger{color:#b42318}
-.hero{padding:82px 7vw 70px;background:linear-gradient(135deg,#e9f6f6,#fff 55%,#edf4fb);position:relative;overflow:hidden}.hero:before{content:"";position:absolute;right:-130px;top:-180px;width:520px;height:520px;border:1px solid #b8dfe4;border-radius:50%;box-shadow:0 0 0 55px rgba(11,114,133,.025),0 0 0 110px rgba(11,114,133,.025)}.eyebrow,.section-no{font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:800;color:var(--blue)}.hero-grid{display:grid;grid-template-columns:1.35fr .8fr;gap:45px;align-items:end;position:relative}.hero h1{font:800 clamp(43px,6.4vw,82px)/1.02 Manrope,sans-serif;letter-spacing:-3px;margin:18px 0}.hero p{font-size:clamp(18px,2vw,25px);line-height:1.5;max-width:880px;color:#486581}.hero-card,.card{background:var(--paper);border:1px solid var(--line);border-radius:17px;box-shadow:var(--shadow)}.hero-card{padding:28px}.hero-card .big{font:800 34px Manrope;margin:13px 0}.tag{display:inline-block;border-radius:30px;padding:7px 11px;background:#dff3f4;color:var(--blue);font-size:11px;font-weight:800}
-.container{max-width:1280px;margin:auto;padding:68px 5vw}.section-head{margin-bottom:28px}.section h2{font:800 clamp(29px,4vw,49px)/1.1 Manrope,sans-serif;letter-spacing:-1.5px;margin:8px 0 12px;color:var(--navy)}.lead{color:var(--muted);line-height:1.75;max-width:850px}.grid{display:grid;gap:17px}.three{grid-template-columns:repeat(3,minmax(0,1fr))}.four{grid-template-columns:repeat(4,minmax(0,1fr))}.two{grid-template-columns:repeat(2,minmax(0,1fr))}.card{padding:23px;box-shadow:0 8px 26px rgba(16,42,67,.035)}.card h3{font-size:18px;line-height:1.3;margin:10px 0;color:var(--navy)}.card p{color:var(--muted);line-height:1.65;margin:0}.icon{font-size:25px}.number{font:800 31px Manrope;color:var(--blue)}.quote{font:700 clamp(25px,3.8vw,45px)/1.25 Manrope;color:var(--navy);border-left:4px solid var(--blue);padding-left:25px;max-width:1050px}
-.canvas{display:grid;grid-template-columns:1fr 1fr;gap:18px}.canvas-panel{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:white}.canvas-title{padding:15px 20px;font-weight:800;background:var(--navy);color:white}.canvas-title.mint{background:#dff3f0;color:var(--navy)}.canvas-body{padding:22px}.canvas-body h3{margin-top:0}.list{display:grid;gap:10px}.list-item{padding:12px 14px;border-radius:10px;background:#f5f8fb;border:1px solid #e5edf3;font-size:13px;line-height:1.45}.list-item strong{display:block;margin-bottom:4px}.list-item small{color:var(--muted)}
-.shift{display:grid;grid-template-columns:1fr 70px 1fr;gap:15px;align-items:stretch}.shiftbox{padding:32px;border-radius:18px;background:white;border:1px solid var(--line)}.shiftbox.target{background:var(--navy);color:white}.shiftbox.target p{color:#d9e2ec}.arrow{display:grid;place-items:center;font-size:36px;color:var(--blue)}
-.service{min-height:230px}.service small{font-size:11px;color:var(--blue);font-weight:800;letter-spacing:1px}.service h3{margin-top:12px}.service ul{padding-left:19px;color:var(--muted);line-height:1.8;font-size:13px}
-.flow{display:flex;flex-wrap:wrap;gap:9px;align-items:center;justify-content:center;background:white;border:1px solid var(--line);border-radius:18px;padding:28px}.flow span{background:#edf8f8;border:1px solid #b8dfe4;border-radius:30px;padding:12px 15px;font-weight:800;font-size:12px}.flow b{color:var(--blue)}
-.ebm-card{border-top:5px solid var(--blue)}.ebm-card:nth-child(2){border-top-color:var(--gold)}.ebm-card:nth-child(3){border-top-color:#5c7cfa}.ebm-card:nth-child(4){border-top-color:#2f9e44}
-.kpi-table{width:100%;border-collapse:collapse;background:white;border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:12px}.kpi-table th,.kpi-table td{padding:14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.kpi-table th{background:var(--navy);color:white;font-weight:800}.kpi-table td strong{color:var(--navy)}.kpi-table td{color:var(--muted);line-height:1.55}.kpi-table tr:last-child td{border-bottom:0}
-.roadmap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}.phase{position:relative}.phase-time{font-size:12px;font-weight:800;color:var(--blue)}.phase h3{color:var(--navy)}.phase ul{padding-left:20px;color:var(--muted);line-height:1.8;font-size:13px}.card .card h3{color:var(--navy)}.card .card p{color:var(--muted)}.decision{background:linear-gradient(135deg,#dff3f0,#fff);border:1px solid #b8dfe4;border-radius:22px;padding:42px}.footer{padding:28px 5vw;text-align:center;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}
+:root{--bg:#eef1f6;--card:#fff;--ink:#14213a;--mut:#55637b;--line:#dce3ee;--navy:#0e1c33;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1220;--card:#131f36;--ink:#e8eef9;--mut:#9aa9c2;--line:#24334e}}
+:root[data-theme="dark"]{--bg:#0a1220;--card:#131f36;--ink:#e8eef9;--mut:#9aa9c2;--line:#24334e}
+*,*:before,*:after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 110px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.75 Vazirmatn,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+html[data-lang=en] body{font-family:Manrope,system-ui,sans-serif;line-height:1.6}
+[lang=en]{display:none}html[data-lang=en] [lang=en]{display:revert}html[data-lang=en] [lang=fa]{display:none}
+html[data-lang=en] body{direction:ltr}
+.shell{max-width:1240px;margin:auto;padding:0 clamp(14px,3vw,28px)}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid #5aa9ff;outline-offset:3px;border-radius:8px}
 
-.orgchart{background:linear-gradient(135deg,#f8fbfd,#eef7f7);border:1px solid var(--line);border-radius:22px;padding:30px 22px;overflow:hidden}
-.org-root{max-width:430px;margin:0 auto 38px;text-align:center;position:relative}
-.org-root:after{content:"";position:absolute;left:50%;top:100%;height:38px;border-left:2px solid #8fbfc5}
-.org-node{background:white;border:1px solid var(--line);border-radius:15px;padding:20px 16px;box-shadow:0 10px 28px rgba(16,42,67,.07);position:relative}
-.org-node h3{margin:0 0 7px;font:800 20px Manrope;color:var(--navy)}
-.org-node p{margin:0;color:var(--muted);font-size:12px;line-height:1.55}
-.org-root .org-node{background:var(--navy);border-color:var(--navy);color:white}
-.org-root .org-node h3{color:white;font-size:25px}
-.org-root .org-node p{color:#d9e2ec}
-.org-children{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;position:relative}
-.org-children:before{content:"";position:absolute;left:10%;right:10%;top:-20px;border-top:2px solid #8fbfc5}
-.org-child{padding-top:0}
-.org-child:before{content:"";display:block;width:2px;height:20px;background:#8fbfc5;margin:0 auto}
-.org-child .org-node{height:100%;padding:18px 12px}
-.org-child .org-node h3{font-size:15px}
-.org-child .org-node p{font-size:11px}
-.org-badge{display:inline-block;font-size:10px;font-weight:800;letter-spacing:1px;color:var(--blue);background:#e0f4f3;border-radius:30px;padding:6px 9px;margin-bottom:10px}
-.org-note{margin-top:20px;padding:15px 18px;border-left:3px solid var(--blue);background:white;border-radius:10px;color:var(--muted);font-size:12px;line-height:1.7}
-@media(max-width:1050px){.org-children{grid-template-columns:repeat(3,minmax(0,1fr))}.org-children:before{display:none}.org-child:before{display:none}}
-@media(max-width:620px){.orgchart{padding:20px 14px}.org-children{grid-template-columns:1fr}.org-root{margin-bottom:25px}.org-root:after{height:25px}.org-child .org-node{min-height:0}.org-child:before{display:none}}
-@media print{.orgchart{background:white;box-shadow:none}}
+/* top bar */
+.bar{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--card) 90%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar .shell{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;padding-block:10px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:14px}
+.mark{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,#7457d8,#2f8ce3);display:grid;place-items:center;color:#fff}
+.nav{display:flex;gap:6px;margin-inline-start:auto;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{position:relative;white-space:nowrap;padding:6px 14px;border-radius:99px;font:700 13px Manrope,sans-serif;direction:ltr;color:var(--mut);border:1px solid transparent;transition:background .25s,color .25s}
+.nav a i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--c);margin-inline-end:7px;opacity:.45;transition:opacity .25s,transform .25s}
+.nav a.on{background:var(--ink);color:var(--bg)}
+.nav a.on i{opacity:1;transform:scale(1.25)}
+.lang{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:6px 12px;font:700 13px inherit;cursor:pointer}
+.prog{position:absolute;inset-inline:0;bottom:-1px;height:3px;background:linear-gradient(90deg,#2f8bea,#17a79c,#e99a20,#8b6ae6);transform-origin:left;transform:scaleX(0)}
+html[dir=rtl] .prog{transform-origin:right}
+@media(max-width:700px){.nav{order:3;width:100%;margin:0}.brand span:last-child{font-size:13px}}
+
+/* hero */
+.hero{margin:clamp(12px,2vw,24px) 0;border-radius:28px;padding:clamp(24px,5vw,56px);color:#fff;background:radial-gradient(circle at 88% 0,#2f5a96 0,transparent 42%),linear-gradient(125deg,#0e1c33,#15335a 70%,#14606c);overflow:hidden}
+.hero h1{font-size:clamp(28px,5vw,54px);line-height:1.2;margin:0 0 14px;max-width:16em;font-weight:800;letter-spacing:-.01em}
+.hero p{margin:0;max-width:44em;color:#cddbef;font-size:clamp(15px,1.6vw,18px)}
+.ov{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:clamp(24px,4vw,44px)}
+.ov a{display:block;padding-top:14px;position:relative;transition:transform .25s}
+.ov a:hover{transform:translateY(-3px)}
+.ov a:before,.ov a:after{content:"";position:absolute;inset-inline:0;top:0;height:5px;border-radius:5px}
+.ov a:before{background:#ffffff26}
+.ov a:after{background:var(--c);transform:scaleX(0);transform-origin:left;animation:fill 1s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--i)*.35s + .2s)}
+html[dir=rtl] .ov a:after{transform-origin:right}
+@keyframes fill{to{transform:scaleX(1)}}
+.ov b{display:block;font:800 clamp(18px,2.2vw,26px)/1.2 Manrope,sans-serif;direction:ltr;text-align:start}
+html[dir=rtl] .ov b{text-align:right}
+.ov span{display:block;font-size:13px;color:#cddbef;margin-top:4px}
+@media(max-width:760px){.ov{grid-template-columns:1fr 1fr;gap:18px 12px}}
+
+/* slides */
+.slide{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(22px,4vw,56px);background:var(--card);border:1px solid var(--line);border-top:6px solid var(--c);border-radius:26px;padding:clamp(22px,4vw,52px);margin:0 0 clamp(18px,3vw,32px);box-shadow:0 18px 50px rgba(15,30,60,.07)}
+.pn{font-weight:700;font-size:13px;color:var(--mut)}
+.sem{display:block;margin:6px 0 2px}
+.sem span{display:inline-block;direction:ltr;font:800 clamp(46px,8vw,92px)/1 Manrope,sans-serif;letter-spacing:-.04em;color:var(--c)}
+.per{color:var(--mut);font-size:14px;font-weight:500}
+.slide h2{font-size:clamp(24px,3vw,36px);line-height:1.25;margin:clamp(18px,3vw,32px) 0 14px;font-weight:800}
+.lbl{font-weight:800;font-size:14px;color:var(--mut);margin:0 0 10px}
+.ob{margin:0;font-size:clamp(15px,1.5vw,17px)}
+.sb h3{margin-top:0}
+.dl{list-style:none;margin:0 0 clamp(22px,3vw,34px);padding:0}
+.dl li{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--line);font-size:15px}
+.dl li:last-child{border:0}
+.dl svg{flex:none;width:24px;height:24px;margin-top:2px}
+.dl circle{fill:none;stroke:var(--line);stroke-width:2}
+.dl path{fill:none;stroke:var(--c);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:22;stroke-dashoffset:22}
+.in .dl path{animation:tick .5s ease forwards;animation-delay:calc(var(--i)*.14s + .15s)}
+.in .dl circle{animation:ring .5s ease forwards;animation-delay:calc(var(--i)*.14s + .15s)}
+@keyframes tick{to{stroke-dashoffset:0}}
+@keyframes ring{to{stroke:var(--c)}}
+.kp{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.kp div{position:relative;overflow:hidden;background:color-mix(in srgb,var(--c) 9%,var(--card));border-radius:18px;padding:20px 18px 16px;border:1px solid color-mix(in srgb,var(--c) 22%,var(--card))}
+.kp div:before{content:"";position:absolute;inset-inline:0;top:0;height:4px;background:var(--c);transform:scaleX(0);transform-origin:left;transition:transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--i)*.12s + .2s)}
+html[dir=rtl] .kp div:before{transform-origin:right}
+.in .kp div:before{transform:scaleX(1)}
+.kp b{display:block;font-size:clamp(16px,1.6vw,18px);line-height:1.4;font-weight:800}
+.kp span{display:block;font-size:13.5px;line-height:1.65;color:var(--mut);margin-top:6px}
+@media(max-width:900px){.slide{grid-template-columns:1fr}}
+@media(max-width:480px){.kp{grid-template-columns:1fr}}
 
 
-.value-map{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.value-link{background:white;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 8px 26px rgba(16,42,67,.035)}.value-link-head{padding:16px 20px;background:linear-gradient(135deg,#102a43,#164e63);color:white;display:flex;justify-content:space-between;gap:12px;align-items:center}.value-link-head h3{margin:0;font-size:17px}.value-link-head span{font-size:10px;letter-spacing:1px;font-weight:800;background:#dff3f0;color:#102a43;padding:7px 9px;border-radius:20px;white-space:nowrap}.value-link-body{padding:18px}.value-row{padding:13px 0;border-bottom:1px solid var(--line)}.value-row:last-child{border-bottom:0}.value-label{font-size:10px;letter-spacing:1px;text-transform:uppercase;font-weight:800;color:var(--muted);margin-bottom:5px}.value-row p{margin:0;color:var(--ink);line-height:1.6;font-size:13px}.value-row.gain p{color:#0b7285;font-weight:700}.value-arrow{display:flex;justify-content:center;align-items:center;color:var(--blue);font-weight:800;font-size:18px;padding:3px 0}@media(max-width:850px){.value-map{grid-template-columns:1fr}}
+.sec{margin:clamp(30px,5vw,60px) 0 18px}
+.sec h2{font-size:clamp(24px,3.2vw,38px);line-height:1.25;margin:0 0 8px;font-weight:800}
+.sec p{margin:0;color:var(--mut);max-width:46em}
+.gc{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,6fr);gap:clamp(20px,4vw,52px);align-items:center;background:var(--card);border:1px solid var(--line);border-radius:26px;padding:clamp(22px,4vw,48px);box-shadow:0 18px 50px rgba(15,30,60,.07)}
+.gc svg{width:100%;max-width:340px;margin:auto;display:block}
+.gc circle{transform-origin:160px 160px;transform:scale(.55);opacity:0;transition:transform .9s cubic-bezier(.2,.8,.2,1),opacity .6s;transition-delay:calc(var(--i)*.22s)}
+.gc.in circle{transform:none;opacity:1}
+.gc text{font:800 17px Manrope,sans-serif;fill:var(--ink);text-anchor:middle;opacity:0;transition:opacity .6s .9s}
+.gc.in text{opacity:1}
+.gr{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.gr:last-child{border:0}
+.gr i{flex:none;width:12px;height:12px;border-radius:50%;background:var(--c);margin-top:9px}
+.gr h3{margin:0 0 4px;font-size:18px}
+.gr p{margin:0;color:var(--mut);font-size:15px}
+.gn{margin:14px 0 0;font-size:13.5px;color:var(--mut)}
+@media(max-width:820px){.gc{grid-template-columns:1fr}}
+.cg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.chal{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:12px;box-shadow:0 14px 40px rgba(15,30,60,.06)}
+.chip{align-self:flex-start;font-size:12px;font-weight:800;padding:3px 11px;border-radius:99px;background:color-mix(in srgb,var(--c) 18%,var(--card));color:var(--ink);border:1px solid color-mix(in srgb,var(--c) 45%,var(--card))}
+.chal h3{margin:0;font-size:18px;line-height:1.45}
+.chal h4{margin:0 0 4px;font-size:13px;color:var(--mut)}
+.chal p,.chal li{margin:0;font-size:14px;line-height:1.7}
+.chal ul{margin:0;padding-inline-start:18px}
+.act{background:color-mix(in srgb,var(--c) 10%,var(--card));border-radius:14px;padding:12px 14px}
+.rs{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:auto;font-size:13px;color:var(--mut)}
+.rs a{direction:ltr;font:700 12px Manrope,sans-serif;padding:3px 10px;border-radius:99px;border:1px solid var(--pc);color:var(--ink);background:color-mix(in srgb,var(--pc) 14%,var(--card))}
+.use{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.use div{padding:14px 16px;border-inline-start:3px solid var(--ink);font-size:14px;color:var(--mut)}
+.use b{display:block;color:var(--ink);font-size:15px}
+@media(max-width:980px){.cg,.use{grid-template-columns:1fr}}
 
-.edit-panel{position:fixed;z-index:60;right:0;top:0;width:min(455px,100vw);height:100vh;overflow:auto;background:white;padding:23px;box-shadow:-20px 0 60px rgba(0,0,0,.18)}.field{margin:14px 0}.field label{display:block;font-size:11px;font-weight:800;margin-bottom:6px}.field input,.field textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:10px}.field textarea{min-height:90px}.admin{border:1px dashed var(--blue);border-radius:11px;padding:12px;margin:10px 0}.adminhead{display:flex;justify-content:space-between;font-size:12px;font-weight:800}.edit-row{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.presentation .topbar{display:none}@media(max-width:850px){.hero-grid,.canvas,.two,.three,.four,.roadmap{grid-template-columns:1fr}.shift{grid-template-columns:1fr}.arrow{height:30px;transform:rotate(90deg)}.hero{padding-top:50px}.hero h1{letter-spacing:-1.5px}.container{padding-top:45px;padding-bottom:45px}.topbar{flex-direction:column;align-items:flex-start}.flow{justify-content:flex-start}.flow b{display:none}}@media print{.topbar,.edit-panel,.no-print{display:none!important}.hero{padding:30px;background:white}.container{padding:25px 0}.card,.hero-card{box-shadow:none;break-inside:avoid}.section{break-inside:avoid}}
+.pm{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.pr{display:grid;grid-template-columns:1fr 1fr;gap:6px 28px;padding:16px clamp(16px,3vw,28px);border-bottom:1px solid var(--line);font-size:15px}
+.pr:last-child{border:0}
+.pr.h{background:color-mix(in srgb,var(--ink) 6%,var(--card));font-weight:800;font-size:13px;color:var(--mut)}
+.pr div:first-child{color:var(--mut)}.pr div:last-child{font-weight:500}
+.lp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.lp div{position:relative;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 18px 18px}
+.lp div:before{content:"";position:absolute;inset-inline:0;top:0;height:4px;background:var(--c);transform:scaleX(0);transform-origin:left;transition:transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--i)*.35s)}
+html[dir=rtl] .lp div:before{transform-origin:right}
+.pmo.in .lp div:before{transform:scaleX(1)}
+.lp b{display:block;font-size:17px;margin-bottom:4px}.lp b i{font:800 13px Manrope,sans-serif;color:var(--c);margin-inline-end:8px;font-style:normal}
+.lp p{margin:0;font-size:14px;color:var(--mut);line-height:1.7}
+.ks{border-inline-start:3px solid var(--c);padding-inline-start:12px}
+@media(max-width:900px){.lp{grid-template-columns:1fr 1fr}.pr{grid-template-columns:1fr}}
+@media(max-width:480px){.lp{grid-template-columns:1fr}}
 
-html[dir="rtl"] body{font-family:Tahoma,Arial,sans-serif}html[dir="rtl"] .hero h1,html[dir="rtl"] .section h2,html[dir="rtl"] .quote,html[dir="rtl"] .hero-card .big{letter-spacing:0}html[dir="rtl"] .section-no,html[dir="rtl"] .eyebrow{text-align:right}html[dir="rtl"] .hero-card{text-align:right}html[dir="rtl"] .quote{border-left:0;border-right:4px solid var(--blue);padding-left:0;padding-right:25px}html[dir="rtl"] .card,html[dir="rtl"] .canvas-body,html[dir="rtl"] .value-link-body,html[dir="rtl"] .phase,html[dir="rtl"] .kpi-table{text-align:right}html[dir="rtl"] .phase ul,html[dir="rtl"] .service ul{padding-left:0;padding-right:20px}html[dir="rtl"] .list-item strong{margin-right:0}html[dir="rtl"] .org-note{border-left:0;border-right:3px solid var(--blue)}
+.nt{margin-top:22px;padding:16px 18px;border-radius:16px;border-inline-start:4px solid var(--c);background:color-mix(in srgb,var(--c) 11%,var(--card))}
+.nt b{display:block;font-size:14px;margin-bottom:4px}
+.nt p{margin:0;font-size:14.5px;line-height:1.8;color:var(--mut)}
+.in .nt{animation:up .8s .35s both}
+@keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+/* closing */
+.end{margin:clamp(8px,2vw,20px) 0;border-radius:26px;padding:clamp(24px,4vw,44px);background:linear-gradient(120deg,#0e1c33,#1c5568);color:#fff}
+.end h2{margin:0 0 8px;font-size:clamp(22px,3vw,30px)}
+.end p{margin:0;color:#d4e4ee;max-width:52em}
+.foot{padding:20px 0 40px;font-size:12.5px;color:var(--mut)}
+@media print{.bar{display:none}.slide{break-inside:avoid;box-shadow:none}.hero,.end{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+@media(prefers-reduced-motion:reduce){.lp div:before{transform:scaleX(1)}.gc circle,.gc text{transform:none;opacity:1}*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.ov a:after{transform:none}.kp div:before{transform:scaleX(1)}.dl path{stroke-dashoffset:0}.dl circle{stroke:var(--c)}}
 </style>
 </head>
-<body><div id="root"></div>
-<script type="text/babel">
-const seed={
-company:"AryoGen Pharmaceutical Company",logo:"https://www.aryogen.com/wp-content/uploads/2023/09/Aryogen-web-logo.png",
-title:"From Strategy to Business Value",
-subtitle:"A Corporate Strategy & Governance function designed to help the CEO and C-level leaders make sharper choices, align the enterprise and convert execution into measurable business value.",
-question:"How do we ensure AryoGen is not only doing more—but doing what matters most?",
-ceoJobs:[
-["Make enterprise trade-offs","Choose where to invest scarce capital, capacity and leadership attention."],
-["Translate strategy into action","Turn ambition into a few measurable priorities that every function understands."],
-["Protect business value","Know which products, markets, capabilities and initiatives create—or destroy—value."],
-["See around corners","Detect external shifts, bottlenecks, risks and emerging opportunities early."],
-["Create accountability without bureaucracy","Review outcomes, not only activity reports, and intervene where decisions are needed."]
-],
-pains:["Too many priorities competing for the same resources","Functional plans that do not add up to one enterprise strategy","Fragmented data and inconsistent definitions","Reports full of activity but weak on impact","Late visibility of bottlenecks and value leakage","Investment and market decisions made without a comparable evidence base","Uneven growth and misalignment between organizational units"],
-gains:["A five-year strategic direction translated into annual goals, key results, employee objectives and process KPIs","A financially informed portfolio of priority projects with cross-functional coordination","A time-based view of product margin, cost per gram and cost drivers to guide cost-reduction decisions","Clear visibility of how production, sales and QA bottlenecks affect market performance","Evidence-based identification of export markets aligned with corporate strategy","Balanced and sustainable growth across organizational units"],
-valueMap:[
-["Strategic alignment & accountability","Competing priorities and disconnected functional plans make it difficult to translate long-term ambition into coordinated daily action.","A five-year strategy cascaded into annual objectives, key results, personal objectives and process KPIs—from project initiation to export-market sales.","Creates one line of sight from corporate strategy to individual and process-level execution."],
-["Portfolio prioritization & coordination","Important projects compete for limited resources, while their financial and strategic contribution is not consistently comparable.","A prioritized portfolio of the most important projects using financial and strategic criteria, with explicit cross-functional coordination around short- and long-term goals.","Makes trade-offs visible and concentrates scarce resources on the initiatives that matter most."],
-["Product economics & cost optimization","Activity and volume reports do not clearly show how production cost changes affect product margin and business value.","A time-based view of product margin, cost per gram, cost of goods and cost drivers, enabling targeted cost-reduction and product-economics decisions.","Connects operational efficiency to profitability rather than treating cost reduction as an isolated activity."],
-["Bottleneck-to-market visibility","Production, sales and QA constraints may be managed separately, making their combined impact on sales difficult to see early.","Identification of critical bottlenecks across production, sales and QA, with analysis of their effect on availability, delivery, market access and sales.","Shifts escalation from local symptoms to enterprise-level constraints and commercial impact."],
-["Strategic export-market focus","Export opportunities may be assessed independently of the company’s strategic priorities, economics and execution capacity.","Identification and prioritization of the most important export markets based on strategic fit, attractiveness, readiness, economics and organizational capacity.","Aligns market-development effort with the enterprise strategy and realistic value potential."],
-["Balanced and sustainable organizational growth","Units can optimize their own targets while creating bottlenecks, dependency problems or imbalances elsewhere in the organization.","A cross-functional view of growth, capacity, capability and performance to keep organizational units developing in balance with one another.","Encourages enterprise optimization and sustainable growth instead of isolated functional success."]
-],
-services:[
-["01","Strategic Intelligence",["External environment and competitor scanning","Market, technology and policy signals","Decision briefs for CEO and C-level leaders"]],
-["02","Strategy & OKR Management",["Corporate strategy architecture","Enterprise priorities and OKR cascade","Quarterly strategy reviews and adaptation"]],
-["03","Strategic Portfolio & Resource Prioritization",["Portfolio segmentation and scenario analysis","Capacity, capital and talent trade-offs","Prioritization criteria and investment gates"]],
-["04","Business Value Intelligence",["Product and market economics","Cost-to-serve and cost-per-gram views","Value leakage, margin and profitability drivers"]],
-["05","Strategic Performance & Decision Support",["Outcome-oriented executive dashboards","Cross-functional KPI tree and review cadence","Decision logs, escalation and action tracking"]],
-["06","Governance Enablement",["Decision rights and governance forums","Management information standards","Clear distinction between strategic governance and project delivery control"]]
-],
-products:[
-["Executive Strategy Cockpit","One integrated view of priorities, outcomes, risks, resources and decisions."],
-["Business Value Intelligence Layer","A decision-ready evidence layer connecting products, costs, capacity, markets and results."],
-["Enterprise OKR System","A focused hierarchy of goals, measures, owners and review rituals."],
-["Strategic Portfolio Map","A comparable view of initiatives and products by value, risk, urgency and resource demand."],
-["Decision Briefs & Scenario Models","Short, evidence-based analyses of strategic choices and their consequences."],
-["Governance Calendar & Decision Log","A transparent rhythm for reviews, decisions, accountabilities and follow-through."]
-],
-relievers:[
-["Priority overload","A small number of enterprise priorities, explicit stop/defer decisions and visible trade-offs."],
-["Fragmented information","Common definitions, integrated views and a single source of management information."],
-["Activity-heavy reporting","Outcome chains that connect activities to capabilities, leading indicators and business results."],
-["Hidden bottlenecks","Cross-functional dependency mapping, leading indicators and escalation triggers."],
-["Weak investment comparability","Standard business cases, scenario analysis and portfolio-level prioritization."],
-["Slow adaptation","Regular strategy reviews, decision logs and evidence-based course correction."]
-],
-creators:[
-["Strategic clarity","Convert complexity into a coherent strategic narrative and a manageable set of choices."],
-["Resource productivity","Show where capacity, capital and talent generate the greatest expected value."],
-["Value realization","Connect operational improvements and product decisions to financial and market outcomes."],
-["Executive confidence","Give leaders timely, consistent evidence for high-consequence decisions."],
-["Organizational learning","Make assumptions visible, test them and improve the management system over time."],
-["Enterprise alignment","Create a shared language between R&D, operations, regulatory, commercial and finance."]
-],
-cycle:["Strategy","Priorities","Portfolio","Resources","Execution","KPIs / EBM","Business Results","Adaptation"],
-ebm:[
-["Current Value","Are AryoGen’s products, operations and markets creating attractive value today?","AryoGen-relevant indicators: product contribution margin; margin trend by product; cost per gram and cost per unit; production yield; cost of goods sold; export revenue quality; product availability; order fulfilment; QA release cycle time; and realized sales versus plan."],
-["Unrealized Value","Where is AryoGen’s available value being lost, delayed or left unexploited?","AryoGen-relevant indicators: unrealized export-market potential; addressable demand by target market; products awaiting launch or market access; capacity not converted into sales; margin leakage; lost-sales estimates caused by shortages or delays; portfolio value at risk; and opportunities for product, process or market optimization."],
-["Time-to-Market","How quickly can AryoGen convert strategic decisions, R&D effort and manufacturing capacity into market value?","AryoGen-relevant indicators: project-to-launch cycle time; time from development completion to regulatory submission; approval lead time; QA release lead time; critical-path delay; tech-transfer duration; manufacturing readiness; time from market decision to first commercial sale; order-to-delivery cycle time; and bottleneck days by function."],
-["Ability to Innovate","Does AryoGen have the capacity, capabilities and learning speed required to create future value?","AryoGen-relevant indicators: strategic innovation capacity; share of resources assigned to priority platforms and products; R&D milestone predictability; reusable technology/platform utilization; number and speed of validated experiments; lessons learned implemented; critical-skill coverage; cross-functional problem-solving cycle time; process-improvement throughput; and percentage of initiatives that generate validated learning."]
-],
-kpis:[
-["Strategic alignment","% of major initiatives linked to an approved enterprise priority","Strategy / OKR system","Clarifies what should receive attention; exposes orphan activities."],
-["Priority discipline","Share of initiatives actively prioritized, deferred or stopped","Portfolio governance","Makes trade-offs explicit and reduces resource dilution."],
-["Resource productivity","Capacity or spend allocated to top strategic priorities","Portfolio + Finance + Functions","Redirects scarce resources toward the chosen value pools."],
-["Time-to-market","End-to-end cycle time; critical-path delay; decision-to-launch time","Portfolio + Operations + Regulatory + R&D","Makes delays visible early and focuses intervention on constraints."],
-["Cost competitiveness","Cost per gram / unit; yield; conversion cost; cost-to-serve","Business Value Intelligence + Operations + Finance","Separates volume growth from real economic improvement."],
-["Value realization","Contribution margin, product profitability, price/mix, value leakage","Business Value Intelligence + Finance + Commercial","Connects operational and portfolio decisions to financial outcomes."],
-["Bottleneck health","Age and impact of critical bottlenecks; cross-functional dependency risk","Strategic Performance + PMO + Functions","Prioritizes executive action where constraints threaten outcomes."],
-["Decision effectiveness","Decision cycle time; decision follow-through; reopened decisions","Governance + CEO office","Improves the speed and quality of management decisions."],
-["Innovation capacity","Share of capacity available for strategic innovation; learning milestones","Strategy + R&D + HR + Operations","Protects future-value creation from short-term overload."],
-["Export-market development","Market attractiveness, readiness, margin and execution progress by target market","Strategic Intelligence + Commercial + Regulatory","Improves the quality of market and investment choices."]
-],
-roadmap:[
-["First 3 months","Diagnose & design",["Interview CEO and C-level decision owners","Map strategic decisions, pain points and information gaps","Define pilot scope, governance sponsor and KPI dictionary","Select priority products, markets or bottlenecks for analysis"]],
-["6 months","Prove business value",["Launch Business Value Intelligence pilot","Build first product economics and bottleneck views","Deliver executive decision briefs with clear options","Validate data quality, ownership and measurable use cases"]],
-["1 year","Institutionalize strategic management",["Facilitate enterprise priorities and OKRs","Introduce portfolio prioritization and resource trade-offs","Establish quarterly strategy and performance reviews","Launch an executive strategy cockpit and decision log"]],
-["2 years","Integrate governance & value realization",["Connect strategy, portfolio, resources and performance","Embed outcome-based management across functions","Expand scenario planning and investment analysis","Continuously adapt the management system based on evidence"]]
-],
-target:["One enterprise strategic direction","Transparent priorities and resource trade-offs","Evidence-based executive decisions","Outcome-oriented performance conversations","Earlier bottleneck escalation","Visible connection between products, markets, operations and value","A repeatable system for adaptation and organizational learning"],
-decision:"Approve the establishment of a Corporate Strategy & Governance function reporting to the CEO and authorize a six-month Business Value Intelligence pilot."
-};
+<body>
+<header class="bar"><div class="shell">
+ <div class="brand"><span class="mark">◈</span><span><span lang="fa">آریوژن | حاکمیت سازمانی</span><span lang="en">AryoGen | Corporate Governance</span></span></div>
+ <nav class="nav" id="nav" aria-label="Phases"></nav>
+ <button class="lang" id="lang" type="button">English</button>
+</div><div class="prog" id="prog"></div></header>
 
-const bilingual = {
-en:{
-  bviTitle:"Business Value Intelligence",
-  bviLead:"A decision-ready intelligence layer that connects products, costs, capacity, markets, resources and outcomes—so leadership can see where value is created, where it is lost, and what decisions matter most.",
-  bviCards:[
-    ["Product economics & profitability","Connect product-level revenue, cost, margin, investment and operational performance to understand the economics behind the portfolio and support evidence-based product and resource decisions."],
-    ["Cost & productivity intelligence","Track cost per gram, unit economics, yield, capacity utilization and cost trends over time to identify cost drivers, productivity gaps and improvement opportunities."],
-    ["Bottleneck & value-stream impact","Trace critical bottlenecks across functions and value streams to quantify their impact on time-to-market, capacity, cost and revenue, enabling targeted interventions rather than isolated process improvements."],
-    ["Strategic portfolio intelligence","Create a comparable view of products, projects and initiatives based on strategic value, business impact, investment, risk, timing and resource requirements—supporting portfolio prioritization and trade-off decisions."],
-    ["Market & export intelligence","Connect market opportunity, pricing, competition, regulatory requirements, capacity and product readiness to evaluate market options and inform domestic/export priorities."],
-    ["Executive decision intelligence","Convert complex analysis into concise decision briefs: the issue, evidence, scenarios, trade-offs, risks and recommended decision inputs—giving executives a common evidence base for high-impact choices."]
-  ],
-  roadmapTitle:"Two-Year Roadmap",
-  roadmap:[
-    ["First 3 Months","Diagnose & Design",["Align with the CEO and key decision owners on the company's highest-value strategic questions","Map critical decisions, information flows, pain points and existing management routines","Define the governance model, pilot scope, decision owners and KPI/data dictionary","Select a small number of high-value products, markets, investments or bottlenecks for the first analyses","Establish the baseline for business value, data quality and decision effectiveness"]],
-    ["6 Months","Prove Business Value",["Launch the Business Value Intelligence pilot","Build initial product economics, cost and bottleneck intelligence","Connect operational evidence to business outcomes such as revenue, margin, capacity and time-to-market","Deliver executive decision briefs for selected strategic decisions","Validate data ownership, definitions and repeatable analytical workflows","Capture measurable business impact and lessons for scaling"]],
-    ["1 Year","Institutionalize Strategic Management",["Translate enterprise strategy into focused annual objectives and measurable OKRs","Establish portfolio prioritization and explicit resource trade-offs","Introduce quarterly strategy and performance reviews","Connect strategic objectives with cross-functional process and portfolio performance","Launch the Executive Strategy Cockpit and Decision Log","Establish recurring governance routines for reviewing outcomes, risks, resources and decisions"]],
-    ["2 Years","Integrate Governance & Value Realization",["Integrate strategic planning, portfolio management, resource allocation and performance management","Embed outcome-based management across functions and leadership levels","Expand scenario planning, investment analysis and strategic forecasting","Strengthen organizational knowledge through decision history, evidence and lessons learned","Continuously refine priorities, measures and management routines based on evidence and realized business value","Establish a mature governance system focused not only on activity and delivery, but on strategic outcomes and business value"]]
-  ]
-},
-fa:{
-  bviTitle:"هوشمندی ارزش کسب‌وکار",
-  bviLead:"یک لایه هوشمندیِ آماده برای تصمیم‌گیری که محصولات، هزینه‌ها، ظرفیت، بازارها، منابع و نتایج را به یکدیگر متصل می‌کند؛ تا رهبری سازمان ببیند ارزش کجا ایجاد می‌شود، کجا از بین می‌رود و کدام تصمیم‌ها بیشترین اهمیت را دارند.",
-  bviCards:[
-    ["اقتصاد محصول و سودآوری","درآمد، هزینه، حاشیه سود، سرمایه‌گذاری و عملکرد عملیاتی هر محصول را به هم متصل می‌کند تا اقتصاد واقعی پورتفولیو روشن شود و تصمیم‌های مبتنی بر شواهد درباره محصول و تخصیص منابع گرفته شود."],
-    ["هوشمندی هزینه و بهره‌وری","هزینه به ازای گرم و واحد، اقتصاد واحد، بازده، استفاده از ظرفیت و روندهای هزینه را در طول زمان پایش می‌کند تا محرک‌های هزینه، شکاف‌های بهره‌وری و فرصت‌های بهبود شناسایی شوند."],
-    ["اثر گلوگاه و زنجیره ارزش","گلوگاه‌های حیاتی میان واحدها و در جریان‌های ارزش را ردیابی و اثر آن‌ها بر زمان عرضه به بازار، ظرفیت، هزینه و درآمد را کمی‌سازی می‌کند؛ تا مداخله روی علت‌های اصلی متمرکز شود، نه بهبودهای منفرد فرایندی."],
-    ["هوشمندی پورتفولیوی استراتژیک","نمایی قابل‌مقایسه از محصولات، پروژه‌ها و ابتکارات بر اساس ارزش استراتژیک، اثر کسب‌وکار، سرمایه‌گذاری، ریسک، زمان‌بندی و نیازمندی منابع ایجاد می‌کند و مبنایی برای اولویت‌بندی و تصمیم‌های Trade-off فراهم می‌سازد."],
-    ["هوشمندی بازار و صادرات","فرصت بازار، قیمت‌گذاری، رقابت، الزامات رگولاتوری، ظرفیت و آمادگی محصول را به هم متصل می‌کند تا گزینه‌های بازار ارزیابی و اولویت‌های بازار داخلی و صادراتی تعیین شوند."],
-    ["هوشمندی تصمیم‌گیری مدیران","تحلیل‌های پیچیده را به Decision Briefهای کوتاه و قابل‌استفاده تبدیل می‌کند: مسئله، شواهد، سناریوها، Trade-offها، ریسک‌ها و ورودی‌های تصمیم؛ تا مدیران ارشد یک مبنای شواهدی مشترک برای تصمیم‌های مهم داشته باشند."]
-  ],
-  roadmapTitle:"نقشه راه دوساله",
-  roadmap:[
-    ["۳ ماه اول","تشخیص و طراحی",["هم‌راستا شدن با مدیرعامل و مالکان تصمیم‌های کلیدی درباره مهم‌ترین پرسش‌های استراتژیک شرکت","نقشه‌برداری از تصمیم‌های حیاتی، جریان اطلاعات، نقاط درد و روال‌های فعلی مدیریت","تعریف مدل حاکمیت، دامنه پایلوت، مالکان تصمیم و فرهنگ‌نامه KPI/داده","انتخاب تعداد محدودی از محصولات، بازارها، سرمایه‌گذاری‌ها یا گلوگاه‌های باارزش برای نخستین تحلیل‌ها","ایجاد خط مبنا برای ارزش کسب‌وکار، کیفیت داده و اثربخشی تصمیم‌گیری"]],
-    ["۶ ماه","اثبات ارزش کسب‌وکار",["راه‌اندازی پایلوت هوشمندی ارزش کسب‌وکار","ایجاد نخستین لایه‌های اقتصاد محصول، هزینه و هوشمندی گلوگاه‌ها","اتصال شواهد عملیاتی به نتایج کسب‌وکار مانند درآمد، حاشیه سود، ظرفیت و زمان عرضه به بازار","ارائه Decision Briefهای مدیریتی برای تصمیم‌های استراتژیک منتخب","اعتبارسنجی مالکیت داده، تعاریف و جریان‌های تحلیلی قابل‌تکرار","ثبت اثر قابل‌اندازه‌گیری کسب‌وکار و درس‌آموخته‌ها برای توسعه"]],
-    ["۱ سال","نهادینه‌سازی مدیریت استراتژیک",["تبدیل استراتژی سازمان به اهداف سالانه متمرکز و OKRهای قابل‌اندازه‌گیری","ایجاد سازوکار اولویت‌بندی پورتفولیو و شفاف‌سازی Trade-offهای منابع","استقرار مرورهای فصلی استراتژی و عملکرد","اتصال اهداف استراتژیک به عملکرد فرایندها و پورتفولیوی بین‌وظیفه‌ای","راه‌اندازی Executive Strategy Cockpit و Decision Log","ایجاد روال‌های مستمر حاکمیتی برای مرور نتایج، ریسک‌ها، منابع و تصمیم‌ها"]],
-    ["۲ سال","یکپارچه‌سازی حاکمیت و تحقق ارزش",["یکپارچه‌سازی برنامه‌ریزی استراتژیک، مدیریت پورتفولیو، تخصیص منابع و مدیریت عملکرد","نهادینه‌کردن مدیریت مبتنی بر پیامد در واحدها و سطوح مختلف رهبری","گسترش سناریوپردازی، تحلیل سرمایه‌گذاری و پیش‌بینی استراتژیک","تقویت دانش سازمانی از طریق تاریخچه تصمیم‌ها، شواهد و درس‌آموخته‌ها","بهبود مستمر اولویت‌ها، سنجه‌ها و روال‌های مدیریتی بر اساس شواهد و ارزش محقق‌شده","ایجاد یک نظام حاکمیتی بالغ که فقط بر فعالیت و تحویل تمرکز نکند، بلکه بر پیامدهای استراتژیک و ارزش کسب‌وکار متمرکز باشد"]]
-  ]
-}
-};
-
-function App(){
-const [d,setD]=React.useState(()=>({...seed,...(JSON.parse(localStorage.getItem("aryogenValuePropV6")||"null")||{})}));
-const [edit,setEdit]=React.useState(false),[tab,setTab]=React.useState("core"),[presentation,setPresentation]=React.useState(false),[lang,setLang]=React.useState(()=>localStorage.getItem("aryogenLang")||"en");
-React.useEffect(()=>{localStorage.setItem("aryogenLang",lang);document.documentElement.lang=lang;document.documentElement.dir=lang==="fa"?"rtl":"ltr"},[lang]);
-const L=bilingual[lang];
-const heroTitle=lang==="fa"?"از استراتژی تا ارزش کسب‌وکار":d.title;
-const heroSubtitle=lang==="fa"?"یک کارکرد حاکمیت و استراتژی شرکتی برای کمک به مدیرعامل و رهبران ارشد در اتخاذ انتخاب‌های دقیق‌تر، هم‌راستاسازی سازمان و تبدیل اجرا به ارزش قابل‌اندازه‌گیری کسب‌وکار.":d.subtitle;
-const heroQuestion=lang==="fa"?"چگونه اطمینان حاصل کنیم که آریوژن فقط بیشتر کار نمی‌کند، بلکه مهم‌ترین کارها را انجام می‌دهد؟":d.question;
-React.useEffect(()=>localStorage.setItem("aryogenValuePropV6",JSON.stringify(d)),[d]);
-const set=(k,v)=>setD(x=>({...x,[k]:v}));const arr=(k,i,v)=>setD(x=>({...x,[k]:x[k].map((a,j)=>j===i?v:a)}));
-const exportJSON=()=>{let b=new Blob([JSON.stringify(d,null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="aryogen-corporate-strategy-value-proposition.json";a.click()};
-const importJSON=e=>{let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{setD(JSON.parse(r.result))}catch{alert("Invalid JSON")}};r.readAsText(f)};
-const upload=e=>{let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>set("logo",r.result);r.readAsDataURL(f)};
-const reset=()=>{if(confirm("Reset all content?")){localStorage.removeItem("aryogenValuePropV6");location.reload()}};
-return <div className={"app "+(presentation?"presentation":"")}>
-<header className="topbar no-print"><div className="brand">{d.logo?<img src={d.logo} alt="AryoGen logo"/>:<div className="logo">LOGO</div>}<div>{d.company}<div style={{fontSize:10,color:"var(--muted)",fontWeight:500}}>Executive Value Proposition</div></div></div><div className="toolbar"><button className="btn" onClick={()=>setPresentation(!presentation)}>{presentation?"Exit presentation":"Presentation mode"}</button><button className="btn" onClick={()=>setLang(lang==="en"?"fa":"en")}>{lang==="en"?"فارسی":"English"}</button><button className="btn" onClick={()=>window.print()}>Print / PDF</button><button className="btn" onClick={exportJSON}>Export JSON</button><label className="btn">Import JSON<input hidden type="file" accept=".json" onChange={importJSON}/></label><button className="btn primary" onClick={()=>setEdit(!edit)}>{edit?"Close editor":"Edit mode"}</button></div></header>
-<section className="hero"><div className="hero-grid"><div><div className="eyebrow">Corporate Strategy & Governance · Executive Proposal</div><h1>{heroTitle}</h1><p>{heroSubtitle}</p><span className="tag">All examples and metrics are illustrative — not actual AryoGen data</span></div><div className="hero-card"><div className="eyebrow">The value proposition</div><div className="big">Better choices.<br/>Faster learning.<br/>More business value.</div><p>Help leadership move from managing activities and projects to managing strategic outcomes and enterprise value.</p></div></div></section>
-<Section no="01" title="The executive question"><div className="quote">{heroQuestion}</div></Section>
-<Section no="02" title="The customer: CEO and C-level leadership" lead="The function is designed around the decisions senior leaders must make—not around producing another layer of reports."><div className="grid two">{d.ceoJobs.map((x,i)=><div className="card" key={i}><div className="number">0{i+1}</div><h3>{x[0]}</h3><p>{x[1]}</p></div>)}</div></Section>
-<Section no="03" title="Customer pains → organizational gains" lead="The value proposition begins with the organization’s real management challenges and defines the specific gains Corporate Governance is expected to create. Each pain is connected to an intended organizational outcome."><div className="value-map">{d.valueMap.map((v,i)=><div className="value-link" key={i}><div className="value-link-head"><h3>{v[0]}</h3><span>VALUE LINK 0{i+1}</span></div><div className="value-link-body"><div className="value-row"><div className="value-label">Customer pain</div><p>⚠️ {v[1]}</p></div><div className="value-arrow">↓</div><div className="value-row gain"><div className="value-label">Organizational gain</div><p>✓ {v[2]}</p></div><div className="value-row"><div className="value-label">How the function contributes</div><p>{v[3]}</p></div></div></div>)}</div></Section>
-<Section no="04" title="The fundamental shift"><div className="shift"><div className="shiftbox"><span className="tag">Current pattern</span><h3>Activity management</h3><p>Are tasks progressing? Are meetings held? Are milestones reported? Are functions busy?</p></div><div className="arrow">→</div><div className="shiftbox target"><span className="tag" style={{background:"#28566b",color:"white"}}>Target pattern</span><h3>Strategic outcome management</h3><p>Are we advancing the right outcomes? Is value being created? What decision or trade-off is needed now?</p></div></div></Section>
-<Section no="05" title="Value map: how the function creates value"><div className="canvas"><div className="canvas-panel"><div className="canvas-title">Pain relievers</div><div className="canvas-body"><h3>How the department reduces executive friction</h3><div className="list">{d.relievers.map((x,i)=><div className="list-item" key={i}><strong>{x[0]}</strong>{x[1]}</div>)}</div></div></div><div className="canvas-panel"><div className="canvas-title mint">Gain creators</div><div className="canvas-body"><h3>How the department increases decision quality and value</h3><div className="list">{d.creators.map((x,i)=><div className="list-item" key={i}><strong>{x[0]}</strong>{x[1]}</div>)}</div></div></div></div></Section>
-<Section no="06" title="Department services and products" lead="Services are the recurring capabilities; products are the reusable management assets and decision tools created by the function."><div className="grid three">{d.services.map((s,i)=><div className="card service" key={i}><small>{s[0]} · SERVICE</small><h3>{s[1]}</h3><ul>{s[2].map((x,j)=><li key={j}>{x}</li>)}</ul></div>)}</div><h3 style={{marginTop:35}}>Core management products</h3><div className="grid three">{d.products.map((p,i)=><div className="card" key={i}><span className="tag">PRODUCT 0{i+1}</span><h3>{p[0]}</h3><p>{p[1]}</p></div>)}</div></Section>
-<Section no="07" title="Strategic management cycle"><p className="lead">A closed loop connecting strategic intent, execution evidence, business results and adaptation.</p><div className="flow">{d.cycle.map((x,i)=><React.Fragment key={i}><span>{x}</span>{i<d.cycle.length-1&&<b>→</b>}</React.Fragment>)}</div></Section>
-<Section no="08" title="Evidence-Based Management" lead="EBM prevents AryoGen from optimizing only what is easy to count. It links strategic alignment, portfolio choices, product economics, bottleneck visibility, export-market focus and sustainable organizational growth to four management questions: Current Value, Unrealized Value, Time-to-Market and Ability to Innovate. The indicators below are proposed starting points—not actual AryoGen baselines or targets."><div className="grid four">{d.ebm.map((x,i)=><div className="card ebm-card" key={i}><span className="tag">EBM 0{i+1}</span><h3>{x[0]}</h3><p>{x[1]}</p><br/><p><strong>AryoGen-relevant indicators</strong><br/>{x[2]}</p></div>)}</div></Section>
-<Section no="09" title="Which metrics and KPIs can this function affect?" lead="The department does not 'own' every KPI. It improves the decision system, visibility, prioritization and governance that influence these outcomes. Actual baselines, owners and causal links must be validated."><div style={{overflowX:"auto"}}><table className="kpi-table"><thead><tr><th>Outcome area</th><th>Illustrative KPI / metric</th><th>Primary collaboration</th><th>How the function affects it</th></tr></thead><tbody>{d.kpis.map((r,i)=><tr key={i}>{r.map((c,j)=><td key={j}>{j===0?<strong>{c}</strong>:c}</td>)}</tr>)}</tbody></table></div></Section>
-<Section no="10" title={L.bviTitle} lead={L.bviLead}><div className="grid three">{L.bviCards.map((x,i)=><div className="card service" key={i}><span className="tag">0{i+1}</span><h3>{x[0]}</h3><p>{x[1]}</p></div>)}</div></Section>
-<Section no="11" title={L.roadmapTitle}><div className="roadmap">{L.roadmap.map((p,i)=><div className="card phase" key={i}><div className="phase-time">{p[0]}</div><h3>{p[1]}</h3><ul>{p[2].map((x,j)=><li key={j}>{x}</li>)}</ul></div>)}</div></Section>
-<Section no="12" title="Target state after two years"><div className="grid three">{d.target.map((x,i)=><div className="card" key={i}><div className="number">✓</div><h3>{x}</h3></div>)}</div></Section>
-<Section no="13" title="Proposed Corporate Governance department hierarchy" lead="A CEO-connected enterprise function that integrates strategy, execution intelligence, digital enablement and organizational learning.">
-<div className="orgchart">
-  <div className="org-root"><div className="org-node"><span className="org-badge" style={{background:"#28566b",color:"white"}}>ENTERPRISE LEADERSHIP</span><h3>Corporate Governance</h3><p>Enterprise alignment · strategic outcomes · decision quality · value realization</p></div></div>
-  <div className="org-children">
-    <div className="org-child"><div className="org-node"><span className="org-badge">01</span><h3>PMO</h3><p>Portfolio delivery, project governance, dependencies, milestones and execution discipline.</p></div></div>
-    <div className="org-child"><div className="org-node"><span className="org-badge">02</span><h3>BI</h3><p>Management information, dashboards, data models, KPI visibility and business-value analytics.</p></div></div>
-    <div className="org-child"><div className="org-node"><span className="org-badge">03</span><h3>AI</h3><p>Decision augmentation, intelligent automation, predictive insights and responsible AI adoption.</p></div></div>
-    <div className="org-child"><div className="org-node"><span className="org-badge">04</span><h3>Knowledge Management</h3><p>Institutional memory, knowledge systems, lessons learned and reusable organizational intelligence.</p></div></div>
-    <div className="org-child"><div className="org-node"><span className="org-badge">05</span><h3>Process Management</h3><p>Process architecture, improvement, standardization, controls and cross-functional flow.</p></div></div>
+<main class="shell">
+ <section class="hero">
+  <h1><span lang="fa">از استراتژی تا ارزش: نقشه راه اجرایی ۲۴ ماهه</span><span lang="en">24-month roadmap: from strategy to business value</span></h1>
+  <p><span lang="fa">واحد استراتژی و حاکمیت سازمانی برای کمک به مدیرعامل و مدیران ارشد در تصمیم‌گیری دقیق‌تر، هم‌راستاسازی سازمان و تبدیل اجرا به ارزش کسب‌وکار قابل‌اندازه‌گیری</span><span lang="en">A Corporate Strategy &amp; Governance function designed to help the CEO and C-level leaders make sharper choices, align the enterprise and convert execution into measurable business value.</span></p>
+  <div class="ov" id="ov"></div>
+ </section>
+ <div class="sec"><h2><span lang="fa">چرا این واحد وجود دارد؟</span><span lang="en">Why this function exists</span></h2><p><span lang="fa">این واحد جایگزین مدیران عملیاتی نیست؛ لایه هم‌راستاسازی و تصمیم‌یاری میان استراتژی و اجراست.</span><span lang="en">It does not replace operational leaders. It is the alignment and decision-support layer between strategy and execution.</span></p></div>
+ <section class="gc" id="gc">
+  <svg viewBox="0 0 320 320" role="img" aria-label="Golden Circle: Why, How, What"><circle style="--i:2" cx="160" cy="160" r="150" fill="#3b8ef0" fill-opacity=".14" stroke="#3b8ef0" stroke-width="2"/><circle style="--i:1" cx="160" cy="160" r="105" fill="#17a79c" fill-opacity=".2" stroke="#17a79c" stroke-width="2"/><circle style="--i:0" cx="160" cy="160" r="58" fill="#8b6ae6" fill-opacity=".3" stroke="#8b6ae6" stroke-width="2"/><text x="160" y="40">What</text><text x="160" y="86">How</text><text x="160" y="167">Why</text></svg>
+  <div>
+   <div class="gr" style="--c:#8b6ae6"><i></i><div><h3><span lang="fa">چرا | Why</span><span lang="en">Why | Purpose</span></h3><p><span lang="fa">شرکت را با استراتژی کلان هم‌راستا کنیم، پیگیری اجرا را تضمین کنیم و منابع را بهینه تخصیص دهیم تا رشد پایدار و مبتنی بر شواهد داشته باشیم.</span><span lang="en">Align the company with strategy, guarantee follow-through, and allocate resources well, so growth is sustainable and evidence-based.</span></p></div></div>
+   <div class="gr" style="--c:#17a79c"><i></i><div><h3><span lang="fa">چگونه | How</span><span lang="en">How | Method</span></h3><p><span lang="fa">چرخه OKR سالانه و سه‌ماهه، معیارهای مشترک برای اولویت‌بندی پروژه و منابع، مقایسه رقابتی و تصمیم‌سازی داده‌محور، و حاکمیت پروژه، BI و مدیریت دانش.</span><span lang="en">Annual and quarterly OKR cycles, shared criteria to prioritize projects and resources, competitive benchmarking and data-driven decisions, plus project governance, BI and knowledge management.</span></p></div></div>
+   <div class="gr" style="--c:#3b8ef0"><i></i><div><h3><span lang="fa">چه چیزی | What</span><span lang="en">What | Deliverables</span></h3><p><span lang="fa">موتور اجرای استراتژی و OKR، سبد پروژه و مدل تخصیص منابع، هوشمندی بازار و اقتصاد محصول، و PMO و KMS/RAG توسعه‌پذیر.</span><span lang="en">Strategy-execution and OKR engine, project portfolio and resource-allocation model, market intelligence and product economics, and a scalable PMO and KMS/RAG.</span></p></div></div>
   </div>
-  <div className="org-note"><strong>Operating principle:</strong> Corporate Governance sets the management system and enables better enterprise decisions. Each capability partners with functional leaders; it does not replace Finance, R&D, Operations, Regulatory, Commercial, HR or IT ownership.</div>
-</div>
-</Section>
-<Section no="14" title="Organizational position"><div className="grid two"><div className="card" style={{textAlign:"center",background:"var(--navy)",color:"white"}}><h2 style={{color:"white",fontSize:32}}>CEO</h2><p style={{color:"#d9e2ec"}}>Enterprise direction and decision authority</p><div style={{fontSize:30,margin:20}}>↓</div><h2 style={{color:"white",fontSize:28}}>Corporate Strategy & Governance</h2><p style={{color:"#d9e2ec"}}>Strategy · intelligence · portfolio choices · value realization · executive decision support</p></div><div className="card"><h3>Distinct from PMO</h3><p>PMO primarily strengthens delivery discipline, project governance, dependencies and execution visibility. Corporate Strategy & Governance focuses on enterprise choices, strategic coherence, value realization, resource trade-offs and adaptation.</p><br/><h3>Design principle</h3><p>Close to the CEO and decision rights, but collaborative with Finance, R&D, Operations, Regulatory, Commercial, HR and PMO.</p></div></div></Section>
-<Section no="15" title="The leadership value"><div className="decision"><span className="tag">The intended outcome</span><h2>Make better enterprise choices—earlier, with stronger evidence and clearer accountability.</h2><div className="grid two" style={{marginTop:25}}><div className="card"><h3>For the CEO</h3><p>A coherent view of strategic progress, value creation, risks and decisions requiring attention.</p></div><div className="card"><h3>For C-level leaders</h3><p>Clear priorities, transparent trade-offs and a shared language for cross-functional performance.</p></div><div className="card"><h3>For the organization</h3><p>Less resource dilution, earlier bottleneck escalation and stronger alignment between activity and impact.</p></div><div className="card"><h3>For the future</h3><p>A scalable management system that learns, adapts and connects strategy to business results.</p></div></div></div></Section>
-<footer className="footer">Executive discussion draft · Illustrative content only · Validate all data, targets, baselines and causal assumptions before formal use.</footer>
-{edit&&<Editor d={d} set={set} arr={arr} upload={upload} reset={reset} close={()=>setEdit(false)} tab={tab} setTab={setTab}/>}
-</div>}
-function Section({no,title,lead,children}){return <section className="container section"><div className="section-head"><div className="section-no">{no}</div><h2>{title}</h2>{lead&&<p className="lead">{lead}</p>}</div>{children}</section>}
-function Editor({d,set,arr,upload,reset,close,tab,setTab}){
-const simple=(label,key,area=false)=><div className="field"><label>{label}</label>{area?<textarea value={d[key]} onChange={e=>set(key,e.target.value)}/>:<input value={d[key]} onChange={e=>set(key,e.target.value)}/>}</div>;
-return <aside className="edit-panel"><div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}><h2>Edit mode</h2><button className="btn" onClick={close}>✕</button></div><p style={{fontSize:12,color:"var(--muted)"}}>Edits are saved automatically in this browser.</p><div className="toolbar"><button className="btn" onClick={()=>setTab("core")}>Core text</button><button className="btn" onClick={()=>setTab("lists")}>Value map</button><button className="btn" onClick={()=>setTab("brand")}>Brand</button></div>
-{tab==="core"&&<>{simple("Company","company")}{simple("Hero title","title")}{simple("Hero subtitle","subtitle",true)}{simple("Strategic question","question",true)}<h3>CEO/C-level jobs</h3>{d.ceoJobs.map((x,i)=><div className="admin" key={i}><div className="field"><label>Job</label><input value={x[0]} onChange={e=>arr("ceoJobs",i,[e.target.value,x[1]])}/></div><div className="field"><label>Explanation</label><textarea value={x[1]} onChange={e=>arr("ceoJobs",i,[x[0],e.target.value])}/></div></div>)}</>}
-{tab==="lists"&&<><h3>Pains</h3>{d.pains.map((x,i)=><div className="field" key={i}><input value={x} onChange={e=>arr("pains",i,e.target.value)}/></div>)}<h3>Gains</h3>{d.gains.map((x,i)=><div className="field" key={i}><input value={x} onChange={e=>arr("gains",i,e.target.value)}/></div>)}<h3>Pain → Gain value links</h3>{(d.valueMap||[]).map((v,i)=><div className="admin" key={i}><div className="field"><label>Category</label><input value={v[0]} onChange={e=>arr("valueMap",i,[e.target.value,v[1],v[2],v[3]])}/></div><div className="field"><label>Pain</label><textarea value={v[1]} onChange={e=>arr("valueMap",i,[v[0],e.target.value,v[2],v[3]])}/></div><div className="field"><label>Organizational gain</label><textarea value={v[2]} onChange={e=>arr("valueMap",i,[v[0],v[1],e.target.value,v[3]])}/></div><div className="field"><label>Contribution mechanism</label><textarea value={v[3]} onChange={e=>arr("valueMap",i,[v[0],v[1],v[2],e.target.value])}/></div></div>)}<h3>Pain relievers</h3>{d.relievers.map((x,i)=><div className="admin" key={i}><input value={x[0]} onChange={e=>arr("relievers",i,[e.target.value,x[1]])}/><textarea value={x[1]} onChange={e=>arr("relievers",i,[x[0],e.target.value])}/></div>)}<h3>Gain creators</h3>{d.creators.map((x,i)=><div className="admin" key={i}><input value={x[0]} onChange={e=>arr("creators",i,[e.target.value,x[1]])}/><textarea value={x[1]} onChange={e=>arr("creators",i,[x[0],e.target.value])}/></div>)}</>}
-{tab==="brand"&&<><p style={{fontSize:12,color:"var(--muted)"}}>Upload the official logo. It is stored locally in this browser.</p><label className="btn accent">Upload / replace logo<input type="file" accept="image/*" hidden onChange={upload}/></label>{d.logo&&<><br/><br/><button className="btn danger" onClick={()=>set("logo","")}>Remove logo</button></>}<h3>Reset</h3><button className="btn danger" onClick={reset}>Reset all content</button></>}
-</aside>}
-ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+ </section>
+ <div class="sec"><h2><span lang="fa">چهار فاز، چهار نقطه عطف</span><span lang="en">Four phases, four milestones</span></h2></div>
+ <div id="slides"></div>
+
+ <section class="pmo" id="pmo"><div class="sec"><h2><span lang="fa">PMO و تجربه مشترک پروژه‌ها</span><span lang="en">PMO and shared project experience</span></h2><p><span lang="fa">PMO مسائل پروژه‌ها را زود نشان می‌دهد و مدیریت دانش (KMS) تجربه هر پروژه را به دارایی همه پروژه‌های بعدی تبدیل می‌کند.</span><span lang="en">The PMO surfaces project problems early, and the knowledge system (KMS) turns each project's experience into an asset for every project after it.</span></p></div>
+ <div class="pm" id="pm"></div>
+ <h3 class="lbl" style="margin:26px 0 12px"><span lang="fa">چرخه تجربه مشترک</span><span lang="en">The shared-experience loop</span></h3>
+ <div class="lp" id="lp"></div></section>
+ <section id="challenges"><div class="sec"><h2><span lang="fa">چالش‌هایی که این نظام حل می‌کند</span><span lang="en">Challenges this system solves</span></h2><p><span lang="fa">نمونه پروژه گالسولفاز: برای هر چالش، مسیر حل و درسی که در KMS ثبت می‌شود. وضعیت هر مورد طبق فایل پروژه مشخص شده است؛ ارقام مالی نمایشی فایل مرجع، فرض آموزشی‌اند و نیامده‌اند.</span><span lang="en">The Galsulfase project as a worked example: for each challenge, how it is resolved and the lesson stored in the KMS. Each item's status follows the project file; the reference file's illustrative financials are teaching assumptions and are left out.</span></p></div>
+ <div class="cg" id="cg"></div>
+ <div class="use">
+  <div><b><span lang="fa">مالک و موعد</span><span lang="en">Owner and due date</span></b><span lang="fa">هر اقدام یک مالک، موعد و مسیر ارجاع دارد؛ مالکیت واقعی باید با مدیران تأیید شود.</span><span lang="en">Every action gets one owner, a due date and an escalation path. Real ownership must be confirmed with leaders.</span></div>
+  <div><b><span lang="fa">اثر و گزینه‌ها</span><span lang="en">Impact and options</span></b><span lang="fa">زمان، هزینه، ظرفیت و اثر تجاری هر گزینه در یک قالب یکسان مقایسه می‌شود.</span><span lang="en">Time, cost, capacity and commercial effect of each option compared in one format.</span></div>
+  <div><b><span lang="fa">تصمیم و پیگیری</span><span lang="en">Decision and follow-through</span></b><span lang="fa">تصمیم، مسئول، تاریخ بازبینی و نتیجه واقعی ثبت می‌شود تا اثربخشی مداخله سنجیده شود.</span><span lang="en">The decision, owner, review date and actual outcome are recorded, so the intervention can be judged.</span></div>
+ </div></section>
+
+ <section class="end">
+  <h2><span lang="fa">پیام کلیدی برای مدیرعامل</span><span lang="en">Executive takeaway</span></h2>
+  <p><span lang="fa">در پایان ۱۴۰۷-S1، هدف ما نظامی مدیریتی است که تکرارپذیر باشد، منابع را به درست‌ترین اولویت‌ها وصل کند و مسیر استراتژی تا ارزش را برای مدیریت شفاف و قابل پیگیری کند.</span><span lang="en">By the end of 1407-S1 the goal is a repeatable management system that ties resources to the right priorities and makes the path from strategy to value visible.</span></p>
+ </section>
+ <footer class="foot"><span lang="fa">شاخص‌ها مشخص می‌کنند چه چیزی سنجیده می‌شود؛ اهداف عددی هر شاخص در جلسه مدیریت تعیین و تصویب می‌شود. S1 نیمه اول و S2 نیمه دوم سال شمسی است.</span><span lang="en">KPIs define what is measured; numeric targets for each are set and approved in a management session. S1 = first half, S2 = second half of the Solar Hijri year.</span></footer>
+</main>
+
+<script>
+const P=[
+{id:'1405-S2',c:'#3b8ef0',per:['مهر تا اسفند ۱۴۰۵','Mehr – Esfand 1405'],
+ ms:['تصویر روشن، چارچوب مصوب','Clear Picture, Approved Framework'],
+ ob:['تصویری دقیق و مشترک از بازار و وضعیت واقعی شرکت بسازیم و چارچوب اجرای استراتژی را به تصویب مدیریت برسانیم.','Build one accurate, shared picture of the market and of where the company really stands, and get the strategy-execution framework approved.'],
+ dl:[['داشبوردهای Market Intelligence: بازار، رقبا و صادرات','Market Intelligence dashboards: market, competitors and exports'],['نقشه ظرفیت و گلوگاه‌های R&D و تولید','Capacity and bottleneck map for R&D and manufacturing'],['چارچوب OKR شرکت و منشور PMO','Company OKR framework and PMO charter'],['نقشه راه و پایلوت KMS برای دانش فنی پروژه‌های R&D','KMS roadmap and pilot for R&D project technical knowledge']],
+ k:[{t:['استفاده از Market Intelligence','Market Intelligence in use'],l:['سهم تصمیم‌های کلیدی که با داشبوردهای بازار و رقبا پشتیبانی می‌شوند','Share of key decisions backed by the market and competitor dashboards']},{t:['تمرکز اهداف','Focus of objectives'],l:['اهداف سطح شرکت در OKR مصوب: کم، روشن و قابل سنجش','Company-level objectives in the approved OKRs: few, clear, measurable']},{t:['شفافیت ظرفیت','Capacity transparency'],l:['واحدهای R&D و تولید که ظرفیت و گلوگاه‌هایشان روی نقشه ثبت شده است','R&D and manufacturing units whose capacity and bottlenecks are on the map']},{t:['نقشه راه پایلوت مدیریت دانش','Knowledge-management pilot roadmap'],l:['نقشه راه پیاده‌سازی سیستم مدیریت دانش، محدود به دانش فنی پروژه‌های R&D و به‌صورت پایلوت','Roadmap for implementing the knowledge management system, as a pilot limited to the technical knowledge of R&D projects']}]},
+{id:'1406-S1',c:'#17a79c',per:['فروردین تا شهریور ۱۴۰۶','Farvardin – Shahrivar 1406'],
+ ms:['اجرای هم‌راستا با استراتژی','Execution Aligned to Strategy'],
+ ob:['اهداف را با بازبینی‌های منظم و مشترک به پروژه‌ها و منابع وصل کنیم تا اجرا قابل پیگیری شود.','Link objectives to projects and resources through regular, shared reviews, so execution can be followed through.'],
+ dl:[['تقویم بازبینی OKR سه‌ماهه','Quarterly OKR review calendar'],['سبد پروژه امتیازدهی‌شده','Scored project portfolio'],['جلسات دوره‌ای (اسپرینت) اولویت‌های مالی و تأمین','Periodic sprint meetings on finance and procurement priorities'],['داشبورد مدیریتی نسخه ۱','Executive dashboard v1']],
+ k:[{t:['انضباط چرخه‌ها','Cycle discipline'],l:['چرخه‌های OKR و جلسات بازبینی که طبق تقویم برگزار می‌شوند','OKR cycles and review meetings held on schedule']},{t:['اتصال پروژه به استراتژی','Project-to-strategy link'],l:['سهم پروژه‌های فعال که به یک OKR مصوب وصل‌اند','Share of active projects tied to an approved OKR']},{t:['سرعت رفع مانع','Blocker resolution speed'],l:['زمان میانه حل موانع بین‌واحدی، با روند کاهشی','Median time to resolve cross-functional blockers, trending down']},{t:['اتصال داده‌های واحدها','Cross-unit data connection'],l:['اتصال داده‌های واحدهای مختلف سازمان و پایه‌ریزی یک پلتفرم یکپارچه، به‌جای گزارش‌های پراکنده','Connecting data from the organization\'s units and laying the foundation of one integrated platform, in place of scattered reports']}]},
+{id:'1406-S2',c:'#e99a20',per:['مهر تا اسفند ۱۴۰۶','Mehr – Esfand 1406'],
+ ms:['نمای یکپارچه مدیریتی','One Integrated View'],
+ ob:['منابع حیاتی سازمان را شناسایی کنیم و بر پایه آن، تصمیم‌های استراتژیک هم‌راستا با OKR بگیریم؛ یعنی روشن شود هر هزینه کجا و چرا صرف شود.','Identify the organization\'s critical resources and, on that basis, make OKR-aligned strategic decisions, so it is clear where each spend goes and why.'],
+ nt:['منطق تصمیم‌گیری','Decision logic'],
+ ntx:['پس از شناسایی منابع حیاتی سازمان (بودجه، ظرفیت R&D و تولید، تجهیزات و تخصص)، هر تصمیم هزینه‌ای با یک OKR مشخص سنجیده می‌شود. نتیجه، تخصیص منابعی است که به‌جای برداشت‌های پراکنده، بر شواهد، اولویت‌های استراتژیک و بازدهی مورد انتظار استوار است.','Once the organization\'s critical resources are identified (budget, R&D and manufacturing capacity, equipment and expertise), every spending decision is tested against a specific OKR. The result is resource allocation built on evidence, strategic priorities and expected return, rather than scattered impressions.'],
+ dl:[['نمای یکپارچه داده‌های بازار، محصول و ظرفیت','One data view: market, product and capacity'],['مدل بهای تمام‌شده و حاشیه سود محصولات منتخب','Cost-of-goods and margin model for selected products'],['فهرست رتبه‌بندی‌شده گلوگاه‌ها','Ranked bottleneck register'],['گزارش مقایسه رقبا و بازارهای صادراتی','Competitor and export-market benchmark'],['نقشه تخصیص منابع: هزینه کجا و برای کدام تصمیم هم‌راستا با OKR','Resource allocation map: where to spend, and for which OKR-aligned decisions']],
+ k:[{t:['تخصیص منابع هم‌راستا با OKR','OKR-aligned resource allocation'],l:['سهم تصمیم‌های هزینه‌ای مهم که با یک OKR مشخص و شواهد داده‌ای توجیه شده‌اند','Share of major spending decisions justified by a specific OKR and by data evidence']},{t:['شفافیت منابع حیاتی','Visibility of critical resources'],l:['منابع کلیدی سازمان (بودجه، ظرفیت، تجهیزات، تخصص) که شناسایی و در نمای یکپارچه ثبت شده‌اند','Key organizational resources (budget, capacity, equipment, expertise) identified and recorded in the integrated view']},{t:['شفافیت بهای تمام‌شده و سود','Cost and margin transparency'],l:['محصولات منتخب دارای بهای تمام‌شده هر گرم تأییدشده مالی و مدل محرک‌های حاشیه سود','Selected products with a finance-confirmed cost per gram and a margin-driver model']},{t:['رفع گلوگاه‌های اثرگذار','Resolution of high-impact bottlenecks'],l:['سهم گلوگاه‌های رتبه‌بندی‌شده که مسئول و برنامه اقدام دارند','Share of ranked bottlenecks that have an owner and an action plan']}]},
+{id:'1407-S1',c:'#8b6ae6',per:['فروردین تا شهریور ۱۴۰۷','Farvardin – Shahrivar 1407'],
+ ms:['نظام مدیریتی پایدار','Self-Sustaining System'],
+ ob:['نظام را تکرارپذیر کنیم، ارزش آن را با شواهد نشان دهیم و چرخه بعدی را برنامه‌ریزی کنیم.','Make the system repeatable, show its value with evidence, and plan the next cycle.'],
+ dl:[['تقویم استراتژی سالانه','Annual strategy calendar'],['گزارش ارزش تصمیم‌ها و بازتخصیص منابع','Decision-value and reallocation report'],['KMS فعال در فرایندهای منتخب','KMS live in selected processes'],['گزارش بلوغ و نقشه چرخه بعد','Maturity report and next-cycle map']],
+ k:[{t:['پایداری نظام بازبینی','Durability of the review system'],l:['بازبینی‌های سه‌ماهه بدون وقفه و طبق تقویم','Quarterly reviews held without gaps and on calendar']},{t:['ردیابی تصمیم تا نتیجه','Decision-to-outcome tracking'],l:['تصمیم‌های مهم دارای مسئول، تاریخ بازبینی و نتیجه ثبت‌شده','Major decisions with a named owner, review date and recorded outcome']},{t:['گستره دانش سازمانی','Reach of organizational knowledge'],l:['فرایندهای متصل به KMS و میزان استفاده واقعی از آن','Processes connected to the KMS and how much it is actually used']},{t:['سطح بلوغ','Maturity level'],l:['سطح بلوغ نظام مدیریتی در ارزیابی پایانی و نقاط ضعف باقی‌مانده','Maturity of the management system in the final assessment, and the gaps that remain']}]}
+];
+const T=a=>`<span lang="fa">${a[0]}</span><span lang="en">${a[1]}</span>`;
+const L={ob:['هدف','Objective'],dl:['خروجی‌های قابل تحویل','Deliverables'],k:['شاخص‌های کلیدی (KPI)','KPIs'],ph:['فاز','Phase'],of:['از','of'],mo:['۶ ماه','6 months']};
+const chk='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7 12.5l3.2 3.2L17 9"/></svg>';
+document.getElementById('nav').innerHTML=P.map((p,i)=>`<a href="#p${i+1}" style="--c:${p.c}"><i></i>${p.id}</a>`).join('');
+document.getElementById('ov').innerHTML=P.map((p,i)=>`<a href="#p${i+1}" style="--c:${p.c};--i:${i}"><b>${p.id}</b><span>${T(p.ms)}</span></a>`).join('');
+document.getElementById('slides').innerHTML=P.map((p,i)=>`
+<section class="slide" id="p${i+1}" style="--c:${p.c}">
+ <div class="sh"><div class="pn">${T(L.ph)} ${i+1} ${T(L.of)} 4</div>
+  <div class="sem"><span>${p.id}</span></div><div class="per">${T(p.per)} · ${T(L.mo)}</div>
+  <h2>${T(p.ms)}</h2><div class="lbl">${T(L.ob)}</div><p class="ob">${T(p.ob)}</p>${p.nt?`<div class="nt"><b>${T(p.nt)}</b><p>${T(p.ntx)}</p></div>`:''}</div>
+ <div class="sb"><h3 class="lbl">${T(L.dl)}</h3>
+  <ul class="dl">${p.dl.map((d,j)=>`<li style="--i:${j}">${chk}<span>${T(d)}</span></li>`).join('')}</ul>
+  <h3 class="lbl">${T(L.k)}</h3>
+  <div class="kp">${p.k.map((k,j)=>`<div style="--i:${j}"><b>${T(k.t)}</b><span>${T(k.l)}</span></div>`).join('')}</div></div>
+</section>`).join('');
+
+const C=[
+{c:'#23a36b',st:['مسئله ثبت‌شده در فایل پروژه','Recorded in the project file'],t:['نبود محصول مرجع و تعویق فاز ۳ بالینی','Reference product unavailable, delaying Phase 3'],
+ ch:['محصول مرجع کارآزمایی دوسوکور طبق برنامه تأمین نشده و جذب و پیگیری بیماران به آن وابسته است. مجموع وزن این فعالیت‌ها در WBS برابر ۱۰ است.','The reference product for the double-blind trial is not available on schedule, and patient recruitment and follow-up depend on it. Those activities carry a combined WBS weight of 10.'],
+ im:[['تدارکات: کانال تأمین برند','Procurement: the brand sourcing channel'],['بالینی و رگولاتوری: برنامه و نقاط عطف','Clinical and regulatory: timeline and milestones'],['مالی و تجاری: هزینه ظرفیت بلااستفاده و جابه‌جایی پنجره عرضه','Finance and commercial: idle-capacity cost and a shifting launch window']],
+ ac:['کانال تأمین جایگزین را بسنجیم، درباره پذیرش تأخیر تصمیم بگیریم، ظرفیت‌های وابسته را بازچینی کنیم و ذی‌نفعان تجاری را زود مطلع کنیم.','Assess an alternate sourcing channel, decide whether to accept the delay, resequence dependent capacity, and warn commercial stakeholders early.'],ks:['پیش از شروع هر کارآزمایی، در دسترس بودن محصول مرجع در فهرست پیش‌نیازها بررسی می‌شود؛ درس این پروژه برای پروژه‌های بعدی در KMS ثبت می‌شود.','Before any trial starts, reference-product availability is checked as a prerequisite; this project\'s lesson is stored in the KMS for later projects.'],ph:[0,1]},
+{c:'#e99a20',st:['سناریوی ریسک، نه رخداد تأییدشده','Risk scenario, not a confirmed event'],t:['تغییر فرایند و احتمال تکرار مطالعه پیش‌بالینی','Process change and a possible pre-clinical repeat'],
+ ch:['بهینه‌سازی فرایند و تولید بچ ثبت در WBS عقب است. تغییری که ویژگی‌های کیفی بحرانی (CQA) را تحت‌تأثیر بگذارد، می‌تواند تکرار مطالعه پیش‌بالینی را لازم کند. فایل پروژه این را به‌عنوان رخداد ثبت نکرده است.','Process optimization and registration batch manufacturing are behind in the WBS. A change that affects critical quality attributes (CQAs) could force a repeat of the pre-clinical study. The project file does not record this as an actual event.'],
+ im:[['بازگشایی بسته کیفیت CTD و جابه‌جایی نقاط عطف رگولاتوری','Reopened CTD quality package and shifted regulatory milestones'],['رقابت بر سر ظرفیت مشترک تسهیلات حیوانی GLP','Competition for shared GLP animal-facility capacity'],['تأخیر احتمالی در کارآزمایی بالینی و عرضه','Possible delay to the clinical trial and launch']],
+ ac:['پیش از تثبیت تغییر، اثر آن بر CQA را با R&D، QA و رگولاتوری رسماً ارزیابی کنیم و تصمیم کنترل تغییر را همراه پیامدش بر پرونده و زمان‌بندی ثبت کنیم.','Before a change is locked in, run a formal CQA impact assessment with R&D, QA and Regulatory, and record the change-control decision with its effect on the dossier and schedule.'],ks:['هر تغییر فرایندی پیش از اجرا با چک‌لیست اثر بر CQA سنجیده می‌شود؛ پرونده‌های تغییر قبلی و پیامدهایشان در KMS قابل جستجو است.','Every process change is screened with a CQA-impact checklist before execution; earlier change files and their outcomes are searchable in the KMS.'],ph:[1]},
+{c:'#e99a20',st:['ریسک بین‌پروژه‌ای','Cross-project risk'],t:['تعارض بر سر تجهیزات و ظرفیت مشترک QC','Conflict over shared QC equipment and capacity'],
+ ch:['ظرفیت آزمون‌های آنالیتیکال QC میان چند بچ و پروژه مشترک است. یک درس‌آموخته تاریخی (نه وضعیت جاری) از خرابی HPLC و صف‌شدن هم‌زمان سه پروژه خبر می‌دهد.','Analytical QC capacity is shared across several batches and projects. A historical lesson learned (not the current state) describes an HPLC outage that queued three projects at once.'],
+ im:[['تأخیر در آزمون، تصمیم‌های کیفیت و نقاط عطف','Delayed testing, quality decisions and milestones'],['رقابت پروژه‌ها بر سر تجهیزات و متخصصان','Projects competing for equipment and specialists'],['اثر بر توالی تولید و زمان عرضه','Effect on manufacturing sequence and time-to-market']],
+ ac:['تقویم ظرفیت بین‌پروژه‌ای QC بسازیم، تجهیزات تک‌نقطه‌ای را شناسایی کنیم، مسیر جایگزین تعریف کنیم و تعارض اولویت‌ها را به کمیته تصمیم‌گیری ارجاع دهیم.','Build a cross-project QC capacity calendar, flag single-point equipment, define backup routes, and escalate priority conflicts to a decision forum.'],ks:['درس خرابی HPLC به یک قاعده در KMS تبدیل می‌شود: هر پروژه جدید پیش از برنامه‌ریزی، تقویم ظرفیت QC را می‌بیند.','The HPLC outage lesson becomes a KMS rule: every new project checks the QC capacity calendar before planning.'],ph:[2]}
+];
+const LC={ch:['چالش','Challenge'],im:['اثر بین‌واحدی','Cross-functional impact'],ac:['راه‌حل','Resolution'],ks:['درس برای پروژه‌های بعدی (KMS)','Lesson for the next projects (KMS)'],rs:['پاسخ در نقشه راه:','Where the roadmap responds:']};
+document.getElementById('cg').innerHTML=C.map(x=>`<article class="chal" style="--c:${x.c}"><span class="chip">${T(x.st)}</span><h3>${T(x.t)}</h3><div><h4>${T(LC.ch)}</h4><p>${T(x.ch)}</p></div><div><h4>${T(LC.im)}</h4><ul>${x.im.map(i=>`<li>${T(i)}</li>`).join('')}</ul></div><div class="act"><h4>${T(LC.ac)}</h4><p>${T(x.ac)}</p></div><div class="ks"><h4>${T(LC.ks)}</h4><p>${T(x.ks)}</p></div><div class="rs">${T(LC.rs)} ${x.ph.map(i=>`<a href="#p${i+1}" style="--pc:${P[i].c}">${P[i].id}</a>`).join('')}</div></article>`).join('');
+const PM=[[['وابستگی‌های بین‌واحدی دیر دیده می‌شوند؛ مثل محصول مرجعی که جلوی جذب بیمار را می‌گیرد.','Cross-functional dependencies surface late, like a reference product that blocks patient recruitment.'],['فهرست وابستگی‌ها هر ماه مرور می‌شود تا گلوگاه‌ها زود به مالک و کمیته برسند.','A dependency register is reviewed monthly, so bottlenecks reach an owner and the committee early.']],
+[['تغییر فرایند بدون سنجش اثر بر کیفیت و رگولاتوری انجام می‌شود.','Process changes go ahead without checking their effect on quality and regulatory.'],['کنترل تغییر: هر تغییر با ارزیابی CQA و تأیید QA و رگولاتوری ثبت می‌شود.','Change control: every change is logged with a CQA assessment and QA and Regulatory sign-off.']],
+[['چند پروژه هم‌زمان بر سر تجهیزات و متخصصان QC رقابت می‌کنند.','Several projects compete for the same QC equipment and specialists.'],['تقویم ظرفیت بین‌پروژه‌ای و مسیر جایگزین برای تجهیزات تک‌نقطه‌ای.','A cross-project capacity calendar, with backup routes for single-point equipment.']],
+[['همان اشتباه در پروژه بعدی تکرار می‌شود، چون تجربه در ذهن افراد می‌ماند.','The same mistake repeats in the next project, because experience stays in people\'s heads.'],['درس‌آموخته‌ها در KMS ثبت می‌شوند و پیش از برنامه‌ریزی هر پروژه جدید مرور می‌شوند.','Lessons are stored in the KMS and read before any new project is planned.']]];
+document.getElementById('pm').innerHTML='<div class="pr h"><div>'+T(['مسئله رایج در پروژه‌ها','Common project problem'])+'</div><div>'+T(['پاسخ PMO','PMO response'])+'</div></div>'+PM.map(r=>`<div class="pr"><div>${T(r[0])}</div><div>${T(r[1])}</div></div>`).join('');
+const LP=[['ثبت','Capture',['در پایان هر مرحله پروژه، درس‌آموخته‌ها با مالک و زمینه ثبت می‌شوند.','At the end of each project stage, lessons are logged with an owner and context.']],['سازمان‌دهی','Organize',['KMS آن‌ها را با برچسب محصول، فرایند و ریسک نگه می‌دارد.','The KMS stores them tagged by product, process and risk.']],['بازاستفاده','Reuse',['تیم پروژه جدید پیش از برنامه‌ریزی، تجربه‌های مرتبط را جستجو می‌کند.','A new project team searches relevant experience before planning.']],['بهبود','Improve',['PMO قالب‌ها و قاعده‌ها را بر پایه درس‌ها به‌روز می‌کند.','The PMO updates templates and rules from what was learned.']]];
+const lc=['#3b8ef0','#17a79c','#e99a20','#8b6ae6'];
+document.getElementById('lp').innerHTML=LP.map((x,i)=>`<div style="--c:${lc[i]};--i:${i}"><b><i>${i+1}</i>${T([x[0],x[1]])}</b><p>${T(x[2])}</p></div>`).join('');
+const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const slides=[...document.querySelectorAll('.slide')],links=[...document.querySelectorAll('#nav a')];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&!e.target.classList.contains('in')){e.target.classList.add('in')}}),{threshold:.25});
+slides.forEach(s=>io.observe(s));io.observe(document.getElementById('gc'));io.observe(document.getElementById('pmo'));
+const act=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const i=slides.indexOf(e.target);links.forEach((a,j)=>a.classList.toggle('on',i===j));const a=links[i];if(a&&a.scrollIntoView&&innerWidth<700)a.parentNode.scrollTo({left:a.offsetLeft-20,behavior:'smooth'})}}),{rootMargin:'-40% 0px -55% 0px'});
+slides.forEach(s=>act.observe(s));
+const prog=document.getElementById('prog');
+function pr(){const h=document.documentElement;prog.style.transform='scaleX('+Math.min(1,scrollY/(h.scrollHeight-innerHeight||1))+')'}
+addEventListener('scroll',pr,{passive:true});pr();
+document.getElementById('lang').onclick=function(){const h=document.documentElement,n=h.dataset.lang==='fa'?'en':'fa';h.dataset.lang=n;h.lang=n;h.dir=n==='fa'?'rtl':'ltr';this.textContent=n==='fa'?'English':'فارسی'};
 </script>
 </body>
 </html>
